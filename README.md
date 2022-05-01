@@ -6,9 +6,9 @@
 
     - [_dictionary_eid.json_](./_scr/dictionary_eid.json) Dictionary file of student EIDs
     - [_dictionary_professors.json_](./_scr/dictionary_professors.json) Dictionary file of Professors and their research areas
-      > [Financial Report Manager](./scr/Financial%20Report%20Manager) Directory holding all script files Financial Report: Manager contains as an Apps Script
-          - [_UI.js_](./_scr/Financial%20Report%20Manager/UI.js)
-          - [_open.html_](./_scr/Financial%20Report%20Manager/open.html)
+    - [Financial Report Manager](./scr/Financial%20Report%20Manager) Directory holding all script files Financial Report: Manager contains as an Apps Script
+      - [_UI.js_](./_scr/Financial%20Report%20Manager/UI.js)
+      - [_open.html_](./_scr/Financial%20Report%20Manager/open.html)
       - [_open-resource.js_](./_scr/Financial%20Report%20Manager/open-resource.js)
       - [_insert-status-results.js_](./_scr/Financial%20Report%20Manager/insert-status-results.js)
       - [_download-tmi-billcodes.js_](./_scr/Financial%20Report%20Manager/download-tmi-billcodes.js)
