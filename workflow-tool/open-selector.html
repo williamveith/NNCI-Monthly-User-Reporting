@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <style>
+    body {
+      background-color: #D3D3D3;
+    }
+    ::placeholder {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 15px;
+      font-style: italic;
+    }
+
+    div {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 20px;
+      position: absolute;
+      right: 10px;
+      top: 10px
+    }
+
+    table {
+      border: 1px none windowtext;
+      padding-top: 0px;
+      padding-left: 0px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 20px;
+    }
+
+    th {
+      padding-left: 0px;
+      padding-bottom: 25px;
+    }
+
+    td {
+      padding-left: 25px;
+      padding-bottom: 15px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    footer {
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      font-size: 10px;
+      position: absolute;
+      bottom: 5px
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <label>Search for Report:
+  <input id="reportTableSearchInputs" type="text" placeholder="report year..." />
+  </label>
+  </div>
+  <? var report = getFinancialReports(); ?>
+  <table>
+    <tr>
+      <th></th>
+    </tr>
+    <tbody id="reportTableBody">
+      <? for (var i = 0; i < report.length; i++) { ?>
+      <tr>
+        <td>
+          <a href=<?=report[i].url ?> target="_blank">
+            <?= report[i].name ?>
+          </a>
+        </td>
+      </tr>
+      <? } ?>
+    </tbody>
+  </table>
+</body>
+
+<script>
+  $(document).ready(function() {
+                $("#reportTableSearchInputs").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#reportTableBody tr").filter(function() {
+                        $(this).toggle($(this).text()
+                        .toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+</script>
+<footer>
+  This program was produced by Veith Automated Work Services.
+</footer>
+
+</html>

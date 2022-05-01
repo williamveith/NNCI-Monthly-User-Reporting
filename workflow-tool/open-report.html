@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_blank">
+  <script>
+    var reportUrl = <?= htmlVariables.reportUrl ?>;
+    var winRef = window.open(reportUrl);
+    winRef ? google.script.host.close() : window.alert('Allow popup to redirect you to ' + reportUrl);
+    window.onload = function () { document.getElementById('url').href = reportUrl; }
+  </script>
+</head>
+
+<body>
+  Kindly allow pop ups</br>
+  Or <a id='url'>Click here </a>to continue!!!
+</body>
+
+</html>
