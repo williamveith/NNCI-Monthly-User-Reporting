@@ -24,9 +24,9 @@
       - [_open.js_](./NNCI%20Monthly%20User%20Reporting%20Tool/open.js)
       - [_open-report.html_](./NNCI%20Monthly%20User%20Reporting%20Tool/open-report.html)
       - [_open-selector.html_](./NNCI%20Monthly%20User%20Reporting%20Tool/open-selector.html)
-3.  [**Reports**](./Reports) Where NNCI Reports and data files used to generate the reports are stored
-4.  [**Templates**](./Templates) Contains blank templates like the NNCI Report Template
+3.  [**Templates**](./Templates) Contains blank templates like the NNCI Report Template
     - [_Templates.xlsx_](./Templates/Template.xlsx) _NNCI Report Template_
+4.  [**Reports**](./Reports) Where NNCI Reports and data files used to generate the reports are stored
 
 ## Demos and Supporting Information
 
