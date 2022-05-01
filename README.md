@@ -29,3 +29,7 @@
       - [_UI.js_](./NNCI%20Monthly%20User%20Reporting%20Tool/UI.js)
 
 ## Demos and Supporting Information
+
+1. [**Demos**](./Demos)
+   - [2021-09_2020-10 NNCI Report](./Demos/2021-09_2020-10.pdf)
+   - [NNCI Monthly User Reporting Tool](./Demos/NNCI%20Monthly%20User%20Reporting%20Tool.pdf)
