@@ -6,3 +6,4 @@ package.json
 .clasp.json
 .claspignore
 .DS_Store
+.gitignore
