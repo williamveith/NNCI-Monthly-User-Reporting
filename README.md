@@ -7,6 +7,6 @@
 3. [**Templates**](./Templates) Contains NNCI Report Template
 4. [**NNCI Monthly User Reporting Tool.docx**](./NNCI%20Monthly%20User%20Reporting%20Tool.docx) Workflow for producing an NNCI report. Embedded functions inside the document prepare the report autonomously
 
-## - [NNCI Monthly User Reporting Tool](NNCI%20Monthly%20User%20Reporting%20Tool) Directory containing all the script files embedded in the file NNCI Monthly User Reporting Tool.gdoc while it is in Google Drive.
+[NNCI Monthly User Reporting Tool](NNCI%20Monthly%20User%20Reporting%20Tool) Directory containing all the script files embedded in the file NNCI Monthly User Reporting Tool.gdoc while it is in Google Drive.
 
 ## Demos and Supporting Information
