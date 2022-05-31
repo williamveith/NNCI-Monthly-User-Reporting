@@ -11,6 +11,7 @@ const tmiDigestedDataHeaders = [[
 
 /**
  * Adds, removes, and checks flags located in a Google Drive file's description
+ * @author William Veith <williamveith@gmail.com>
  */
 class FileFlags {
   /**
@@ -65,6 +66,7 @@ class FileFlags {
 
 /**
  * Processes all raw, sanitized, TMI excel files located in the directory. Saves the digested TMI data to a google sheet file in the directory
+ * @author William Veith <williamveith@gmail.com>
  */
 function mainDigestTMIData() {
   const fileFlags = new FileFlags();
@@ -104,6 +106,7 @@ function mainDigestTMIData() {
 
 /**
  * Sanitized all raw TMI excel files located in the directory
+ * @author William Veith <williamveith@gmail.com>
  */
 function mainSanitizeTMIRawData() {
   const tmiDataFileIds = getRawTMIDataFiles();
@@ -119,6 +122,7 @@ function mainSanitizeTMIRawData() {
 
 /**
  * Retrieves all raw TMI files from the directory that have not already been digested
+ * @author William Veith <williamveith@gmail.com>
  * @return {string[]} An array of file ids belonging to raw tmi data files
  */
 function getRawTMIDataFiles() {
@@ -138,6 +142,7 @@ function getRawTMIDataFiles() {
 
 /**
  * Retrieves all undigested, raw TMI data spreadsheets. Converts any excel files into google sheets files if necessary
+ * @author William Veith <williamveith@gmail.com>
  * @param {string[]} fileIds
  * @return {GoogleAppsScript.Spreadsheet.Spreadsheet[]} Array of Spreadsheet objects
  */
@@ -170,6 +175,7 @@ function getSpreadSheets(fileIds) {
 
 /**
  * Removes raw TMI data headers, trailing/leading whitespace, blank rows, and formula errors. Makes data safe for the digest function
+ * @author William Veith <williamveith@gmail.com>
  * @param {sheetInfo} sheetInfo TMI raw data spreadsheet properties
  */
 function sanitizeData(sheetInfo) {
@@ -203,6 +209,7 @@ function sanitizeData(sheetInfo) {
 
 /**
  * Rearranges raw TMI data so it works with the LabAccess Database
+ * @author William Veith <williamveith@gmail.com>
  * @param {sheetInfo} sheetInfo TMI raw data spreadsheet properties
  */
 function sortData(sheetInfo) {
@@ -241,6 +248,7 @@ function sortData(sheetInfo) {
 
 /**
  * Modifies and restructures TMI raw data names to meet LabAccess database format
+ * @author William Veith <williamveith@gmail.com>
  * @param {sheetInfo} sheetInfo TMI raw data spreadsheet properties
  */
 function formatNames(sheetInfo) {
@@ -268,6 +276,7 @@ function formatNames(sheetInfo) {
 
 /**
  * Turns all names into lowercase to prevent errors
+ * @author William Veith <williamveith@gmail.com>
  * @param {*[]} data  Google sheet header data
  * @return {*[]} Google sheet header data correctly formatted
  */
@@ -281,6 +290,7 @@ function setRawDataTypeAndCase(data) {
 
 /**
  * Reorders and reforms names from raw TMI data. Returns names that could not be fixed
+ * @author William Veith <williamveith@gmail.com>
  * @param {*[]} typeSetDataArray 2D array of Google Sheet data typeset
  * @param {string[]} nameKey An array of header to split data at
  * @return {*[]} 2D array with google sheet data rows that need fixing manually
@@ -329,6 +339,7 @@ function splitTransformConcatNames(typeSetDataArray, nameKey) {
 
 /**
  * Adds Professor research field and student EIDs from dictionary files
+ * @author William Veith <williamveith@gmail.com>
  * @param {sheetInfo} sheetInfo TMI raw data spreadsheet properties
  */
 function addDictionaryValues(sheetInfo) {
@@ -360,6 +371,7 @@ function addDictionaryValues(sheetInfo) {
 
 /**
  * Saves digested Raw TMI data to a new spreadsheet
+ * @author William Veith <williamveith@gmail.com>
  * @param {sheetInfo} sheetInfo
  * @param {GoogleAppsScript.Spreadsheet.Spreadsheet} reportSpreadsheet Digested data to be saved
  * @return {GoogleAppsScript.Spreadsheet.Sheet} Google Sheet object containing digested TMI data
@@ -385,6 +397,7 @@ function saveDigestedData(sheetInfo, reportSpreadsheet) {
 
 /**
  * Styles the new sheet containing the digested TMI data
+ * @author William Veith <williamveith@gmail.com>
  * @param {GoogleAppsScript.Spreadsheet.Spreadsheet} sheet Google Sheet object
  */
 function setStyleFormatDigestedData(sheet) {
@@ -408,6 +421,7 @@ function setStyleFormatDigestedData(sheet) {
 
 /**
  * Styles the sheet containing the TMI data that needs to be manually reformated
+ * @author William Veith <williamveith@gmail.com>
  * @param {GoogleAppsScript.Spreadsheet.Spreadsheet} sheet Google Sheet object
  */
 function setStyleFormatMisshapenData(sheet) {

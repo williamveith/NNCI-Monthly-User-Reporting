@@ -1,5 +1,6 @@
 /**
  * Opens the folder with a redirect based on the name provided
+ * @author William Veith <williamveith@gmail.com>
  * @param {string} folderName Name of the folder to open in a window redirect
  */
 function openDigestFolder(folderName) {
@@ -20,6 +21,7 @@ function openDigestFolder(folderName) {
 
 /**
  * Opens sheet containing all raw TMI data that requires manual reformatting
+ * @author William Veith <williamveith@gmail.com>
  * @param {GoogleAppsScript.Spreadsheet.Spreadsheet} spreadsheet
  */
 function openSheet(spreadsheet) {
@@ -35,6 +37,7 @@ function openSheet(spreadsheet) {
 
 /**
  * Opens NNCI Monthly User Reporting Tool word document from a Spreadsheet report
+ * @author William Veith <williamveith@gmail.com>
  */
 function openHelpDocuments() {
   const file = DriveApp.getFilesByName(`NNCI Monthly User Reporting Tool`).next();
@@ -47,6 +50,7 @@ function openHelpDocuments() {
 
 /**
  * Open a modal box informing user selected resource is opening in a new window
+ * @author William Veith <williamveith@gmail.com>
  * @param {object} htmlVariables
  * @param {string} templateName
  */

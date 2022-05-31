@@ -1,5 +1,6 @@
 /**
  * Collects all digested TMI Spreadsheet files, turns them into Tab Separated Value text files, then downloads them to the local computer
+ * @author William Veith <williamveith@gmail.com>
  */
 function downloadTMIDigests() {
   mainDigestTMIData(); // Makes sure all raw files are digested
@@ -23,6 +24,7 @@ function downloadTMIDigests() {
 /**
  * Concatenates an array of arrays together with new lines.
  * Delimits all values in the array with tabs
+ * @author William Veith <williamveith@gmail.com>
  * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet Spreadsheet sheet containing digested TMI Data to download
  * @return {*[]} Digested TMI Data as a tab separated values array
  */
@@ -33,6 +35,7 @@ function convertSheet2TSV(sheet) {
 
 /**
  * Turn array contains arrays of tab separated values into files, then download the files to the local computer
+ * @author William Veith <williamveith@gmail.com>
  * @param {*[]} tsvFiles Array of arrays containing digested TMI data in tab separated value form
  */
 function downloadTSVFiles(tsvFiles) {

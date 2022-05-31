@@ -1,5 +1,6 @@
 /**
  * Creates Financial Report Tab in NNCI Monthly User Reporting Tool on file open
+ * @author William Veith <williamveith@gmail.com>
  */
 function onOpen() {
   const ui = DocumentApp.getUi();
@@ -12,6 +13,7 @@ function onOpen() {
 
 /**
  * Adds UI button functionality to "Create New Report" located in tab "Financial Report"
+ * @author William Veith <williamveith@gmail.com>
  */
 function initializeYearMenuFunction() {
   const ui = DocumentApp.getUi();
@@ -28,6 +30,7 @@ function initializeYearMenuFunction() {
 
 /**
  * Typecasts Year into a number. Verifies year in tbe starting year
+ * @author William Veith <williamveith@gmail.com>
  * @param {string} response Text response from user input field
  * @return {number} Year in 4 digit number form
  */

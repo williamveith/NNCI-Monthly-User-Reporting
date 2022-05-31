@@ -1,4 +1,7 @@
-/** Directory structure for NNCI report */
+/** 
+ * Directory structure for NNCI report
+ * @author William Veith <williamveith@gmail.com> 
+ * */
 const directoryMap = {
   name: 'Root',
   children: [
@@ -39,14 +42,21 @@ const directoryMap = {
   ],
 };
 
-/** 3 letter abbreviated month names */
+/** 
+ * 3 letter abbreviated month names 
+ * @author William Veith <williamveith@gmail.com>
+ * */
 const monthNames = ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
 
-/** Financial report cell indices for month header rows */
+/** 
+ * Financial report cell indices for month header rows
+ * @author William Veith <williamveith@gmail.com> 
+ * */
 const firstRowMonthHeaders = [7, 21, 38, 47, 61, 78, 87, 101, 118, 127, 141, 158, 169, 184];
 
 /**
  * Creates files and directories for a new NNCI reporting year
+ * @author William Veith <williamveith@gmail.com>
  * @param {string} startYear Year report starts on
  * Ex. 2021-09_2022-10 report starts 2022
  */
@@ -60,6 +70,7 @@ function initializeYear(startYear) {
 
 /**
  * Creates the root folder for all NNCI files and data for a year
+ * @author William Veith <williamveith@gmail.com>
  * @param {string} startYear Year report starts on
  * @return {GoogleAppsScript.Drive.Folder} Root folder for year report and data
  */
@@ -72,6 +83,7 @@ function createFolders(startYear) {
 
 /**
  * Creates the directory structure for the NNCI report
+ * @author William Veith <williamveith@gmail.com>
  * @param {GoogleAppsScript.Drive.Folder} parentFolder Year NNCI Folder
  * @param {object} currentEntry Name of next directory to be created
  */
@@ -86,6 +98,7 @@ function folderStructure(parentFolder, currentEntry = directoryMap) {
 
 /**
  * Creates new NNCI Report File
+ * @author William Veith <williamveith@gmail.com>
  * @param {GoogleAppsScript.Drive.Folder} rootFolder Year NNCI Folder
  * @return {GoogleAppsScript.Drive.File} Newly created NNCI Report File
  */
@@ -100,6 +113,7 @@ function initializeReport(rootFolder) {
 
 /**
  * Updates elements of the new NNCI report to reflect the Reporting Year
+ * @author William Veith <williamveith@gmail.com>
  * @param {GoogleAppsScript.Drive.File} reportFile Newly created NNCI Report File
  * @param {number} startYear Year in 4 digit number form
  */

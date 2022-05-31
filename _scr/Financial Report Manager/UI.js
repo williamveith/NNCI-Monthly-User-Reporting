@@ -1,4 +1,7 @@
-/** Server side functions the program UI can trigger client side */
+/** 
+ * Server side functions the program UI can trigger client side 
+ * @author William Veith <williamveith@gmail.com>
+ * */
 const reportDataFunctions = {
   openRawDataFolder: (function() {
     openDigestFolder(`TMI Data Raw`);
@@ -26,7 +29,10 @@ const reportDataFunctions = {
   }),
 };
 
-/** Creates then serves the Financial Report Spreadsheet program UI */
+/** 
+ * Creates then serves the Financial Report Spreadsheet program UI 
+ * @author William Veith <williamveith@gmail.com>
+ * */
 function financialReportUi() {
   SpreadsheetApp.getUi().createMenu(`Financial Report Data`)
       .addSubMenu(SpreadsheetApp.getUi().createMenu('Open')

@@ -1,5 +1,6 @@
 /**
  * Creates the financial report selector window
+ * @author William Veith <williamveith@gmail.com>
  */
 function doGet() {
   const template = HtmlService.createTemplateFromFile('open-selector');
@@ -15,6 +16,7 @@ function doGet() {
 
 /**
  * Retrieves information on all currently existing financial reports
+ * @author William Veith <williamveith@gmail.com>
  * @return {object[]} Array of objects each containing the names & url of a Financial Report file
  */
 function getFinancialReports() {
@@ -35,6 +37,7 @@ function getFinancialReports() {
 
 /**
  * Creates and displays a modal dialog box so a user can select a financial report
+ * @author William Veith <williamveith@gmail.com>
  * @param {object[]} reports Array of objects each containing the names & url of a Financial Report file
  */
 function openReportSelection(reports) {
@@ -50,6 +53,7 @@ function openReportSelection(reports) {
 
 /**
  * Opens selected financial report file
+ * @author William Veith <williamveith@gmail.com>
  * @param {GoogleAppsScript.Drive.File} reportFile NNCI financial report file
  */
 function openFinancialReport(reportFile) {
@@ -71,6 +75,7 @@ function openFinancialReport(reportFile) {
 
 /**
  * Alerts user that selector found no existing NNCI financial reports
+ * @author William Veith <williamveith@gmail.com>
  * @param {GoogleAppsScript.Drive.File} reportFile If no report file exists
  */
 function noReportFound(reportFile) {

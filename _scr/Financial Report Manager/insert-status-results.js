@@ -35,6 +35,7 @@ const blockRow = [8, 22, 39, 48, 62, 79, 88, 102, 128, 142, 159, 170, 185];
 
 /**
  * Structures a block of Stats Results rows that correspond with a block of rows in the financial report excel file
+ * @author William Veith <williamveith@gmail.com>
  */
 class Block {
   /**
@@ -60,6 +61,7 @@ class Block {
 
 /**
  * Adds cumulative and monthly Stats Reports in the directory to the financial report spreadsheet
+ * @author William Veith <williamveith@gmail.com>
  */
 function addSummaryReports() {
   const activeSpreadSheetId = SpreadsheetApp.getActiveSpreadsheet().getId();
@@ -90,6 +92,7 @@ function addSummaryReports() {
 
 /**
  * Loads Stats Result file and transforms it to a form that can be inserted into the financial report spreadsheet
+ * @author William Veith <williamveith@gmail.com>
  * @param {string} fileId Stats Result file Id
  * @return {string[]} Stats Results reorganized and structured for insertion into a spreadsheet
  */
@@ -106,6 +109,7 @@ function loadFile(fileId) {
 
 /**
  * Removes elements containing text file header information from the Stats Result array
+ * @author William Veith <williamveith@gmail.com>
  * @param {string[]} contentArray Array contains arrays of Stat Results for each month
  * @param {number} numberOfHeaderRows Number of header rows in the Stats Result text file
  */
@@ -117,6 +121,7 @@ function removeHeaders(contentArray, numberOfHeaderRows = 7) {
 
 /**
  * Removes elements containing Stats Result data not needed in the financial report
+ * @author William Veith <williamveith@gmail.com>
  * @param {string[]} contentArray contains Stats Result as an array
  * @return {string[]} contains array of Stats Result data needed for the report
  */
@@ -135,6 +140,7 @@ function removeIrrelevantData(contentArray) {
 
 /**
  * Separates Stats Result data, by category, into separate sections
+ * @author William Veith <williamveith@gmail.com>
  * @param {string[]} contentArray contains arrays of Stat Results for each month
  * @return {string[]} contentArray contains arrays of Stat Results for each month
  */
@@ -154,6 +160,7 @@ function breakIntoBlocks(contentArray) {
 
 /**
  * Removes Stats Result data catagories no longer needed in the financial spreadsheet report
+ * @author William Veith <williamveith@gmail.com>
  * @param {object[]} contentArray contains arrays of Stat Results for each month
  * @return {object[]} contains arrays of Stat Results for each month
  */
@@ -171,6 +178,7 @@ function removeIrrelevantBlocks(contentArray) {
 
 /**
  * Reorders Stats Result array, so array rows are ordered identically to financial report rows
+ * @author William Veith <williamveith@gmail.com>
  * @param {string[]} contentArray contains arrays of Stat Results for each month
  * @return {string[]} contains arrays of Stat Results for each month
  */
@@ -194,6 +202,7 @@ function reorderBlocks(contentArray) {
 
 /**
  * Places each Stats Result data category into its own block object
+ * @author William Veith <williamveith@gmail.com>
  * @param {object[]} contentArray contains arrays of Stat Results for each month
  * @return {object[]} contains arrays of Stat Results for each month
  */
@@ -222,6 +231,7 @@ function breakIntoSubBlocks(contentArray) {
 
 /**
  * Inserts Stats Result data into the financial report spreadsheet
+ * @author William Veith <williamveith@gmail.com>
  * @param {string} activeSpreadSheetId
  * @param {string[]} contentArray Array containing Stats Result
  * @param {string} month 3 letter month abbreviation for the Stats Result
